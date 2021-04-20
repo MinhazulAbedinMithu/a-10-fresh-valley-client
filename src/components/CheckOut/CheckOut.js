@@ -10,7 +10,7 @@ const CheckOut = () => {
     const [product, setProduct] = useState({})
     console.log(product);
     useEffect(()=>{
-        fetch(`http://localhost:5000/singleProduct/${id}`)
+        fetch(`https://fresh-valley-server.herokuapp.com//singleProduct/${id}`)
         .then(res => res.json())
         .then(data=>{
             setProduct(data)
@@ -23,7 +23,7 @@ const CheckOut = () => {
         const date = new Date();
         const newOrder ={name, price, email, date};
         // setOrder(newOrder)
-        fetch('http://localhost:5000/orderByCustomer',{
+        fetch('https://fresh-valley-server.herokuapp.com//orderByCustomer',{
             method: 'POST',
             headers: {'Content-Type':'application/json'},
             body: JSON.stringify(newOrder)

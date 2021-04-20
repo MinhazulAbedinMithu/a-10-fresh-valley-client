@@ -12,7 +12,7 @@ const AddProduct = () => {
             price: data.price,
             imageURL: imageURL
         };
-        const url = `http://localhost:5000/addProduct`;
+        const url = `https://fresh-valley-server.herokuapp.com//addProduct`;
         console.log(productData);
         fetch(url, {
             method: 'POST',

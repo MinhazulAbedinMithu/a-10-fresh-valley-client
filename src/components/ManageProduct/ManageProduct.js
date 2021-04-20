@@ -7,7 +7,7 @@ import { useHistory } from 'react-router';
 const ManageProduct = () => {
         const [products, setProducts] = useState([]);
         const loadAllProducts = () =>{
-            fetch('http://localhost:5000/products')
+            fetch('https://fresh-valley-server.herokuapp.com//products')
                 .then(res => res.json()).then(data => {
                     setProducts(data)
                 })
@@ -17,7 +17,7 @@ const ManageProduct = () => {
         }, [])
 
         const handleDelete = (id) => {
-            fetch(`http://localhost:5000/delete/${id}`,{
+            fetch(`https://fresh-valley-server.herokuapp.com//delete/${id}`,{
                 method: "DELETE",
             })
             .then(res=>res.json())

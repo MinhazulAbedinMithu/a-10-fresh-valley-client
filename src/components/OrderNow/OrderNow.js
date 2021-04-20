@@ -9,7 +9,7 @@ const OrderNow = () => {
     console.log(products[17]);
     // const {name, price, imagURL} = products; 
     useEffect(()=>{
-        fetch(`http://localhost:5000/getOrderByCustomer?email=${userEmail}`)
+        fetch(`https://fresh-valley-server.herokuapp.com//getOrderByCustomer?email=${userEmail}`)
         .then(res => res.json())
         .then(data=>{
             setProducts(data);
